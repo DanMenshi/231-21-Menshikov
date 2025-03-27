@@ -1,0 +1,350 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-x: hidden; /* Убираем горизонтальный ползунок */
+}
+header {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.logo {
+    margin-left: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.logo:hover {
+    color: #3498db;
+}
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #3498db;
+}
+.user-actions {
+    margin-right: 15px;
+}
+
+.user-actions button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.user-actions button:hover {
+    background-color: #2980b9;
+}
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #ecf0f1;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+/* Общие стили ошибок */
+.alert {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #dc3545;
+    border: 1px solid #f5c6cb;
+    background-color: #f8d7da;
+}
+
+.error-input {
+    border: 2px solid #ff4444 !important;
+}
+.error-input {
+    border: 2px solid #ff4444 !important;
+    margin-bottom: 5px;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Стили для форм */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #2980b9;
+}
+/* Стили для чекбокса согласия */
+.agreement-checkbox {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.agreement-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.error-label {
+    color: #dc3545;
+}
+
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-button:hover {
+    background-color: #3498db;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-switch a {
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+/* Стили для профиля */
+.profile-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #ecf0f1;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.profile-info {
+    margin-bottom: 20px;
+}
+.edit-profile-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.edit-profile-button:hover {
+    background-color: #2980b9;
+}
+/* Стили для футера */
+footer {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto; /* Добавляем это, чтобы футер был внизу */
+}
+.footer-content {
+    position: relative;
+    z-index: 1;
+}
+.about-us, .social-media, .contact-info, .copyright {
+    margin-bottom: 10px;
+}
+.social-media a {
+    color: #ecf0f1;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+.social-media a:hover {
+    color: #3498db;
+}
+/* Стили для списка мероприятий */
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.event-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.event-item:hover {
+    transform: scale(1.05);
+}
+.event-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.event-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+/* Стили для закладок */
+.bookmarks-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.bookmarks-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.bookmark-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.bookmark-item:hover {
+    transform: scale(1.05);
+}
+.bookmark-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.bookmark-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
